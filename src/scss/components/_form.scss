@@ -1,0 +1,40 @@
+.form {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__label {
+    // width: 100%;
+    position: relative;
+  }
+
+  .just-validate-error-label {
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    padding-inline: 5px;
+    font-size: rem(16);
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--dark-color) !important;
+  }
+
+  &__input {
+    border-radius: 5px;
+    width: 100%;
+    height: rem(64);
+    font-size: rem(18);
+    padding-inline: rem(20);
+
+    &::placeholder {
+      color: rgba(40,41,68, 0.7);
+    }
+  }
+
+  &__btn {
+    background-color: var(--dark-color);
+    font-size: rem(18);
+    padding-block: rem(18);
+  }
+}

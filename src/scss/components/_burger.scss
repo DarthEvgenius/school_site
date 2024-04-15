@@ -1,0 +1,60 @@
+.burger {
+  display: none;
+
+  @include tablet-middle {
+    display: inline-block;
+    position: relative;
+    width: rem(44);
+    height: rem(44);
+    background:
+      linear-gradient(var(--dark-color), var(--dark-color)) padding-box,
+      linear-gradient(to bottom,rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.01)) border-box;
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    &__line {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+
+      border-radius: 100px;
+      height: 2px;
+      width: 26px;
+      background-color: var(--light-color);
+
+      &:first-child {
+        margin-top: -7px;
+      }
+
+      &:nth-child(3) {
+        left: calc(50% - 7px);
+        margin-top: 7px;
+        width: 13px;
+      }
+
+    }
+  }
+}
+
+.burger-close {
+  display: none;
+
+  @include tablet-middle {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: var(--container-offset);
+    width: rem(44);
+    height: rem(44);
+
+    background:
+      url('../img/close.svg') center no-repeat,
+      linear-gradient(var(--dark-color), var(--dark-color)) padding-box,
+      linear-gradient(to bottom,rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.01)) border-box;
+
+    background-size: 24px 24px, cover, cover;
+    border: 2px solid transparent;
+    border-radius: 10px;
+  }
+}

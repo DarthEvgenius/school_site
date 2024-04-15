@@ -1,0 +1,46 @@
+.tooltip {
+  margin-left: 10px;
+
+  &__btn {
+    border-radius: 50%;
+
+    @include flex-all-center;
+
+    &:focus {
+      + .tooltip__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @include hover {
+      + .tooltip__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__txt {
+    padding: rem(15) rem(20);
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(20, 16, 36, 0.1);
+    background-color: var(--light-color);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 160%;
+    color: var(--dark-color);
+
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out
+    ;
+  }
+}

@@ -1,0 +1,10 @@
+.phone {
+  font-weight: 600;
+  font-size: rem(30);
+  color: var(--light-color);
+  transition: color 0.2s linear;
+
+  @include hover {
+    color: var(--accent-color);
+  }
+}
