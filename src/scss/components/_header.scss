@@ -1,6 +1,6 @@
 .header {
   background-color: var(--dark-color);
-  padding-top: 30px;
+  padding-top: min(30px, 3vh);
 
   @include tablet-middle {
     position: fixed;
