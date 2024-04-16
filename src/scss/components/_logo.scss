@@ -1,4 +1,13 @@
 .logo {
+  img {
+    filter: invert(100%) sepia(0%) saturate(7490%) hue-rotate(228deg) brightness(101%) contrast(101%);
+    transition: filter 0.1s linear;
+
+    @include hover {
+      filter: invert(17%) sepia(87%) saturate(3356%) hue-rotate(346deg) brightness(91%) contrast(94%);
+    }
+  }
+
   @include mobile {
     width: 136px;
   }

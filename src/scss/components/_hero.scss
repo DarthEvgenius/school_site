@@ -73,6 +73,11 @@
   &__link {
     padding-block: clamp(1.1rem, 4vw, rem(26));
     padding-inline: rem(54);
+    transition: scale 0.2s linear;
+
+    @include hover {
+      scale: 1.1;
+    }
 
     @include small-tablet {
       font-size: 1rem;
